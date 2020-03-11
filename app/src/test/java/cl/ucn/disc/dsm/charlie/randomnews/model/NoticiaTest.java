@@ -15,7 +15,6 @@
 
 package cl.ucn.disc.dsm.charlie.randomnews.model;
 
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -23,9 +22,9 @@ import org.slf4j.LoggerFactory;
 import org.threeten.bp.ZonedDateTime;
 
 /**
- * Test of {@link cl.ucn.disc.dsm.charlie.randomnewsapp.model.Noticia}.
+ * Test of {@link cl.ucn.disc.dsm.charlie.randomnews.model.Noticia}.
  *
- * @author Diego Urrutia-Astorga.
+ * @author Charlie Condorcet.
  */
 public class NoticiaTest {
 
@@ -42,7 +41,7 @@ public class NoticiaTest {
 
     log.debug("Testing the Constructor ..");
 
-    // The values
+    // The values.
     final Long id = 1L;
     final String titulo = "The Titulo";
     final String fuente = "The Fuente";
@@ -54,9 +53,10 @@ public class NoticiaTest {
     final ZonedDateTime fecha = ZonedDateTime.now(Noticia.ZONE_ID);
 
     // The instance of this Test.
-    final Noticia noticia = new Noticia(id, titulo, fuente, autor, url, urlFoto, resumen, contenido, fecha);
+    final Noticia noticia = new Noticia(id, titulo, fuente, autor, url, urlFoto, resumen, contenido,
+        fecha);
 
-    // Testing
+    // Testing.
     Assertions.assertEquals(id, noticia.getId());
     Assertions.assertEquals(titulo, noticia.getTitulo());
     Assertions.assertEquals(fuente, noticia.getFuente());

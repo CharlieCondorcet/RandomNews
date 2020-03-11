@@ -25,7 +25,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    //databinding no mencionado en la guia
+    //Fix for databinding.
     buildFeatures {
         // Determines whether to enable support for Jetpack Compose.
         // https://developer.android.com/jetpack/compose
@@ -75,19 +75,19 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    // Retrofit: https://square.github.io/retrofit/
+    // Retrofit: https://square.github.io/retrofit/.
     def retrofit_version = "2.7.1"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
-    // Gson: https://github.com/google/gson
+    // Gson: https://github.com/google/gson.
     implementation 'com.google.code.gson:gson:2.8.6'
 
-    // Commons Lang3: https://commons.apache.org/proper/commons-lang/
+    // Commons Lang3: https://commons.apache.org/proper/commons-lang/.
     implementation 'org.apache.commons:commons-lang3:3.9'
 
-    // Hashing functions
-    // https://github.com/OpenHFT/Zero-Allocation-Hashing
+    // Hashing functions.
+    // https://github.com/OpenHFT/Zero-Allocation-Hashing.
     implementation "net.openhft:zero-allocation-hashing:0.10.1"
 
     // Leak Canary.

@@ -58,12 +58,12 @@ public class Transformer {
     // The host.
     final String host = getHost(article.url);
 
-    // Si el articulo es null .
+    // If the Article is null...
     if (article.title == null) {
 
       log.warn("Article without title: {}", toString(article));
 
-      // .. y el contenido es null, lanzar exception!.
+      // ... and the content is null, throw exception !.
       if (article.description == null) {
         throw new NewsApiNoticiaService.NewsAPIException("Article without title and description");
       }
@@ -72,7 +72,7 @@ public class Transformer {
       article.title = "No Title*";
     }
 
-    // FIXED: En caso de no haber una fuente.
+    // FIXED: In case there is no source.
     if (article.source == null) {
       article.source = new Source();
 
@@ -84,7 +84,7 @@ public class Transformer {
       }
     }
 
-    // FIXED: Si el articulo no tiene author.
+    // FIXED: If the article has no author.
     if (article.author == null) {
 
       if (host != null) {
@@ -120,29 +120,29 @@ public class Transformer {
 
 
   /**
-   * Convierte una fecha de {@link String} a una {@link ZonedDateTime}.
+   * Parse the date of {@link String} to {@link ZonedDateTime}.
    *
    * @param fecha to parse.
    * @return the fecha.
-   * @throws cl.ucn.disc.dsm.thenews.services.newsapi.NewsApiNoticiaService.NewsAPIException en caso de no lograr
-   * convertir la fecha.
+   * @throws cl.ucn.disc.dsm.thenews.services.newsapi.NewsApiNoticiaService.NewsAPIException
+   * In case you can't convert the date.
    */
   private static ZonedDateTime parseZonedDateTime(final String fecha) {
 
-    // Na' que hacer si la fecha no existe.
+    // It is imperative that the date exists.
     if (fecha == null) {
       throw new NewsApiNoticiaService.NewsAPIException("Can't parse null fecha");
     }
 
     try {
-      // Tratar de convertir la fecha .
+      // Try to parse the date.
       return ZonedDateTime.parse(fecha);
     } catch (DateTimeParseException ex) {
 
-      // Mensaje de debug.
+      // Debug message.
       log.error("Can't parse date: ->{}<-. Error: ", fecha, ex);
 
-      // Anido la DateTimeParseException en una NoticiaTransformerException.
+      // Nest the DateTimeParseException to NoticiaTransformerException.
       throw new NewsApiNoticiaService.NewsAPIException("Can't parse date: " + fecha, ex);
     }
   }
@@ -173,7 +173,7 @@ public class Transformer {
   }
 
   /**
-   * Transforma en String un objeto t mostrando sus atributos.
+   * Transform a t object in a String showing his attributes.
    *
    * @param t   to convert.
    * @param <T> type of t.

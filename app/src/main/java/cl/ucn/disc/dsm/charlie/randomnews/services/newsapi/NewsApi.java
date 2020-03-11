@@ -40,9 +40,9 @@ public interface NewsApi {
   /**
    * https://newsapi.org/docs/endpoints/top-headlines
    *
-   * @param category to use as filter.
-   * @param pageSize the number of results to get.
-   * @return the call of {@link NewsApiResult}.
+   * @param Category to use as filter.
+   * @param PageSize the number of results to get.
+   * @return The call of {@link NewsApiResult}.
    */
   @Headers({"X-Api-Key: " + API_KEY})
   @GET("top-headlines")
@@ -52,7 +52,7 @@ public interface NewsApi {
   /**
    * https://newsapi.org/docs/endpoints/everything.
    *
-   * @return the call of {@link NewsApiResult}.
+   * @return The call of {@link NewsApiResult}.
    */
   @Headers({"X-Api-Key: " + API_KEY})
   // TODO: Change the list of sources.

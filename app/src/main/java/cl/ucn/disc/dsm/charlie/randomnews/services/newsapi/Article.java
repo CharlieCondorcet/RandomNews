@@ -15,8 +15,6 @@
 
 package cl.ucn.disc.dsm.charlie.randomnews.services.newsapi;
 
-
-
 /**
  * The Article class.
  *

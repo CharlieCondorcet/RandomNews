@@ -25,6 +25,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 /**
  * The Test of NoticiaService.
  *
@@ -38,14 +39,14 @@ public class NoticiaServiceTest {
   private static final Logger log = LoggerFactory.getLogger(NoticiaServiceTest.class);
 
   /**
-   * Test {@link NoticiaService#getNoticias(int)}
+   * Test {@link NoticiaService#getNoticias(int)}.
    */
   @Test
   public void testGetNoticiasMockup() {
 
     log.debug("Testing the NoticiaService ..");
 
-    // The noticia service
+    // The noticia service.
     final NoticiaService noticiaService = new MockupNoticiaService();
 
     // The List of Noticia.
@@ -62,9 +63,8 @@ public class NoticiaServiceTest {
   }
 
 
-
   /**
-   * Test {@link NoticiaService#getNoticias(int)} with NewsAPI.org
+   * Test {@link NoticiaService#getNoticias(int)} with NewsAPI.org.
    */
   @Test
   public void testGetNoticiasNewsApi() {
@@ -73,7 +73,7 @@ public class NoticiaServiceTest {
 
     log.debug("Testing the NewsApiNoticiaService, requesting {} News.", size);
 
-    // The noticia service
+    // The noticia service.
     final NoticiaService noticiaService = new NewsApiNoticiaService();
 
     // The List of Noticia.

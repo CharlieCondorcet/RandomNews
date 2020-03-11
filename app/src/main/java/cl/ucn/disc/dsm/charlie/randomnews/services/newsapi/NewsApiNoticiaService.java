@@ -29,7 +29,6 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-
 /**
  * Get a CALL and process the result implementing {@link NoticiaService}.
  *
@@ -46,17 +45,17 @@ public final class NewsApiNoticiaService implements NoticiaService {
    * The Constructor.
    */
   public NewsApiNoticiaService() {
-    // https://futurestud.io/tutorials/retrofit-getting-started-and-android-client
+    // https://futurestud.io/tutorials/retrofit-getting-started-and-android-client.
     this.newsApi = new Retrofit.Builder()
-        // The main URL
+        // The main URL.
         .baseUrl(NewsApi.BASE_URL)
-        // JSON to POJO
+        // JSON to POJO.
         .addConverterFactory(GsonConverterFactory.create())
-        // Validate the interface
+        // Validate the interface.
         .validateEagerly(true)
-        // Build the Retrofit ..
+        // Build the Retrofit .
         .build()
-        // .. get the NewsApi.
+        // Get the NewsApi.
         .create(NewsApi.class);
   }
 
@@ -96,7 +95,6 @@ public final class NewsApiNoticiaService implements NoticiaService {
       if (theResult.articles == null) {
         throw new NewsAPIException("Articles in NewsResult was null");
       }
-
 
       // Article to Noticia (transformer) via Stream.
       return theResult.articles.stream()
