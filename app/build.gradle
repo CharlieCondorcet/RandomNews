@@ -20,6 +20,28 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //databinding no mencionado en la guia
+    buildFeatures {
+        // Determines whether to enable support for Jetpack Compose.
+        // https://developer.android.com/jetpack/compose
+        compose = false
+        // Determines whether to generate a BuildConfig class.
+        buildConfig = true
+        // Determines whether to support View Binding.
+        viewBinding = true
+        // Determines whether to support Data Binding.
+        dataBinding = false
+        // Determines whether to generate binder classes for your AIDL files.
+        aidl = true
+        // Determines whether to support injecting custom variables into the module's R class.
+        resValues = true
+
+    }
 }
 
 dependencies {
@@ -53,6 +75,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    
+
 
 }
