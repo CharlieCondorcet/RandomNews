@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package cl.ucn.disc.dsm.charlie.randomnewsapp.services;
+package cl.ucn.disc.dsm.charlie.randomnews.services;
 
 import cl.ucn.disc.dsm.charlie.randomnews.services.NoticiaService;
 import cl.ucn.disc.dsm.charlie.randomnews.model.Noticia;
@@ -63,5 +63,31 @@ public class NoticiaServiceTest {
 
 
 
+  /**
+   * Test {@link NoticiaService#getNoticias(int)} with NewsAPI.org
+   */
+  @Test
+  public void testGetNoticiasNewsApi() {
+
+    final int size = 20;
+
+    log.debug("Testing the NewsApiNoticiaService, requesting {} News.", size);
+
+    // The noticia service
+    final NoticiaService noticiaService = new NewsApiNoticiaService();
+
+    // The List of Noticia.
+    final List<Noticia> noticias = noticiaService.getNoticias(size);
+
+    Assertions.assertNotNull(noticias);
+    Assertions.assertEquals(noticias.size(), size, "Error de tamanio");
+
+    for (final Noticia noticia : noticias) {
+      log.debug("Noticia: {}.", noticia);
+    }
+
+    log.debug("Done.");
+
+  }
 
 }

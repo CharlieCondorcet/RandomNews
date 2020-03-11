@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package cl.ucn.disc.dsm.charlie.randomnewsapp.services.newsapi;
+package cl.ucn.disc.dsm.charlie.randomnews.services.newsapi;
 
 import cl.ucn.disc.dsm.charlie.randomnews.services.newsapi.NewsApi;
 import cl.ucn.disc.dsm.charlie.randomnews.services.newsapi.NewsApiResult;
@@ -21,15 +21,8 @@ import cl.ucn.disc.dsm.charlie.randomnews.model.Noticia;
 import cl.ucn.disc.dsm.charlie.randomnews.services.NoticiaService;
 import cl.ucn.disc.dsm.charlie.randomnews.services.Transformer;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.concurrent.TimeUnit;
-import net.openhft.hashing.LongHashFunction;
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
-import org.threeten.bp.ZonedDateTime;
 import retrofit2.Call;
 import retrofit2.HttpException;
 import retrofit2.Response;
