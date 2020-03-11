@@ -13,10 +13,11 @@
  * limitations under the License.
  */
 
-package cl.ucn.disc.dsm.charlie.randomnews;
+package cl.ucn.disc.dsm.charlie.randomnews.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import cl.ucn.disc.dsm.charlie.randomnews.R;
 
 public class MainActivity extends AppCompatActivity {
 
