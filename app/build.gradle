@@ -90,5 +90,10 @@ dependencies {
     // https://github.com/OpenHFT/Zero-Allocation-Hashing
     implementation "net.openhft:zero-allocation-hashing:0.10.1"
 
+    // Leak Canary.
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0'
+
+    // Prettytime.
+    implementation "org.ocpsoft.prettytime:prettytime:4.0.2.Final"
 
 }
