@@ -66,6 +66,7 @@ dependencies {
     // ThreeTen Android Backport.
     implementation 'com.jakewharton.threetenabp:threetenabp:1.2.1'
 
+
     // Testing.
     // testImplementation 'junit:junit:4.12'.
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
@@ -95,5 +96,13 @@ dependencies {
 
     // Prettytime.
     implementation "org.ocpsoft.prettytime:prettytime:4.0.2.Final"
+
+    //complement for fix zone time.
+    // https://mvnrepository.com/artifact/org.threeten/threetenbp
+    implementation 'org.threeten:threetenbp:1.4.1'
+
+
+
+
 
 }

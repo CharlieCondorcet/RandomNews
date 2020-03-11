@@ -34,7 +34,6 @@
     app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:subtitle="@string/subtitle"
     app:title="@string/title" />
-
   <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
     android:id="@+id/swl_refresh"
     android:layout_width="match_parent"

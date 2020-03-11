@@ -26,6 +26,7 @@ import cl.ucn.disc.dsm.charlie.randomnews.databinding.ActivityMainBinding;
 import cl.ucn.disc.dsm.charlie.randomnews.model.Noticia;
 import cl.ucn.disc.dsm.charlie.randomnews.services.NoticiaService;
 import cl.ucn.disc.dsm.charlie.randomnews.services.newsapi.NewsApiNoticiaService;
+import com.jakewharton.threetenabp.AndroidThreeTen;
 import java.util.List;
 import org.apache.commons.lang3.time.StopWatch;
 import org.slf4j.Logger;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
 
     // Inflate the layout.
     ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
