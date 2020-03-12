@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020. Charlie Condorcet.
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <resources>
+    <color name="n0">#FFFFFF</color>
+    <color name="n50">#FFE6E6</color>
+    <color name="n100">#FFAAAA</color>
+    <color name="n200">#FF8C8C</color>
+    <color name="n300">#FF6E6E</color>
+    <color name="n400">#FF5A5A</color>
+    <color name="n500">#FF3C3C</color>
+    <color name="n600">#FF2828</color>
+    <color name="n700">#FF0000</color>
+    <color name="n800">#DC0000</color>
+    <color name="n900">#C80000</color>
+    <color name="n1000">#AA0000</color>
+    <color name="n1100">#6E0000</color>
+    <color name="n1200">#500000</color>
+    <color name="n1300">#320000</color>
+    <color name="n1400">#000000</color>
+  </resources>
+</resources>
