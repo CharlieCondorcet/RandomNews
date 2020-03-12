@@ -65,19 +65,9 @@ public class NoticiaViewHolder extends RecyclerView.ViewHolder {
     this.binding.tvAutor.setText(noticia.getAutor());
     this.binding.tvFuente.setText(noticia.getFuente());
 
-
     // FIXED: The format of the date. ZonedDateTime to Date.
     final Date date = DateTimeUtils.toDate(noticia.getFecha().toInstant());
     this.binding.tvFecha.setText(this.prettyTyme.format(date));
-
-
-    this.binding.tvTitulo.setText(noticia.getTitulo());
-    this.binding.tvResumen.setText(noticia.getResumen());
-    this.binding.tvAutor.setText(noticia.getAutor());
-    this.binding.tvFuente.setText(noticia.getFuente());
-
-    // FIXME: The format of the date.
-    this.binding.tvFecha.setText(noticia.getFecha().toString());
 
     // If exist the url ..
     if (noticia.getUrlFoto() != null) {
