@@ -17,6 +17,7 @@ package cl.ucn.disc.dsm.charlie.randomnews;
 
 import android.app.Application;
 import androidx.appcompat.app.AppCompatDelegate;
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.jakewharton.threetenabp.AndroidThreeTen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,10 +41,13 @@ public class MainApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
+    log.debug("Initializing...");
 
-    // Day and Night support
+    // Facebook fresco.
+    Fresco.initialize(this);
+
+    // Day and Night support.
     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY);
-    log.debug("Initializing: Done.");
 
     AndroidThreeTen.init(this);
 

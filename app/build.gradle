@@ -4,6 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
+    //FIX: Compatible side by side NDK version was not found for android.ndkVersion '21.0.6011959'
     // Version de NDK a utilizar
     ndkVersion "21.0.6011959-rc2"
 

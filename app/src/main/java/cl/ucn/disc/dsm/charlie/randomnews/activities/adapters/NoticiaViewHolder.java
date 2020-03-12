@@ -17,6 +17,7 @@ package cl.ucn.disc.dsm.charlie.randomnews.activities.adapters;
 
 import androidx.recyclerview.widget.RecyclerView;
 //import cl.ucn.disc.dsm.charlie.randomnews.R;
+import cl.ucn.disc.dsm.charlie.randomnews.R;
 import cl.ucn.disc.dsm.charlie.randomnews.model.Noticia;
 import cl.ucn.disc.dsm.charlie.randomnews.databinding.RowNoticiaBinding;
 import java.util.Date;
@@ -68,6 +69,24 @@ public class NoticiaViewHolder extends RecyclerView.ViewHolder {
     // FIXED: The format of the date. ZonedDateTime to Date.
     final Date date = DateTimeUtils.toDate(noticia.getFecha().toInstant());
     this.binding.tvFecha.setText(this.prettyTyme.format(date));
+
+
+    this.binding.tvTitulo.setText(noticia.getTitulo());
+    this.binding.tvResumen.setText(noticia.getResumen());
+    this.binding.tvAutor.setText(noticia.getAutor());
+    this.binding.tvFuente.setText(noticia.getFuente());
+
+    // FIXME: The format of the date.
+    this.binding.tvFecha.setText(noticia.getFecha().toString());
+
+    // If exist the url ..
+    if (noticia.getUrlFoto() != null) {
+      // .. set the uri
+      this.binding.sdvFoto.setImageURI(noticia.getUrlFoto());
+    } else {
+      // .. set a default image
+      this.binding.sdvFoto.setImageResource(R.drawable.ic_launcher_background);
+    }
   }
 
 }
