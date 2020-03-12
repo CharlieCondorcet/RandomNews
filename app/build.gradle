@@ -97,7 +97,8 @@ dependencies {
     // Prettytime.
     implementation "org.ocpsoft.prettytime:prettytime:4.0.2.Final"
 
-
+    // Toasty https://github.com/GrenderG/Toasty
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
 
 
 }
