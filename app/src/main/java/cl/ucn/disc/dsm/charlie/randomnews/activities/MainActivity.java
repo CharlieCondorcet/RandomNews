@@ -19,6 +19,7 @@ import android.os.AsyncTask;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import cl.ucn.disc.dsm.charlie.randomnews.activities.adapters.NoticiaAdapter;
@@ -165,6 +166,9 @@ public class MainActivity extends AppCompatActivity {
 
       });
     }
+
+
+
 
   }
 }

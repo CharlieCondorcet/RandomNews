@@ -44,6 +44,7 @@ public class MainApplication extends Application {
 
     // Day and Night support
     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY);
+    log.debug("Initializing: Done.");
 
 
     AndroidThreeTen.init(this);
