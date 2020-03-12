@@ -27,6 +27,7 @@ import cl.ucn.disc.dsm.charlie.randomnews.model.Noticia;
 import cl.ucn.disc.dsm.charlie.randomnews.services.NoticiaService;
 import cl.ucn.disc.dsm.charlie.randomnews.services.newsapi.NewsApiNoticiaService;
 import com.jakewharton.threetenabp.AndroidThreeTen;
+import es.dmoral.toasty.Toasty;
 import java.util.List;
 import org.apache.commons.lang3.time.StopWatch;
 import org.slf4j.Logger;
@@ -107,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
       binding.swlRefresh.setOnRefreshListener(() -> {
         log.debug("Refreshing ..");
 
+        //Toasty to reffresh the news.
+        Toasty.normal(this, "Updating the news :) ...").show();
+
         // Execute in background .
         AsyncTask.execute(() -> {
 
@@ -125,7 +129,8 @@ public class MainActivity extends AppCompatActivity {
               this.noticiaAdapter.setNoticias(noticias);
 
               // 3. Show a Toast!.
-              Toast.makeText(this, "Done: " + stopWatch, Toast.LENGTH_SHORT).show();
+              Toasty.info(this, "Done: " + stopWatch, Toast.LENGTH_SHORT, true).show();
+
 
             });
 
@@ -144,8 +149,8 @@ public class MainActivity extends AppCompatActivity {
                 sb.append(ex.getCause().getMessage());
               }
 
-              // 3. Show the Toast!.
-              Toast.makeText(this, sb.toString(), Toast.LENGTH_LONG).show();
+              // 3. Show the Toast for the error!.
+              Toasty.error(this, "An error occurred while updating the news :(\n"+sb.toString(), Toast.LENGTH_SHORT, true).show();
 
             });
 

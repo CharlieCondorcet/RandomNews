@@ -16,21 +16,21 @@
 
 <resources>
   <color name="colorAccent">#D81B60</color>
-  <color name="lineDivider">@color/n800</color>
+  <color name="lineDivider">@color/d800</color>
 
   <!-- Text -->
-  <color name="textColorPrimary">@color/n900</color>
-  <color name="textColorSecondary">@color/n800</color>
-  <color name="textColorTertiary">@color/n700</color>
+  <color name="textColorPrimary">@color/d900</color>
+  <color name="textColorSecondary">@color/d800</color>
+  <color name="textColorTertiary">@color/d700</color>
 
   <!-- Toolbar -->
-  <color name="statusBarColor">@color/n1100</color>
-  <color name="toolbarBackground">@color/n900</color>
-  <color name="windowBackground">@color/n0</color>
-  <color name="dividerColor">@color/n300</color>
-  <color name="navigationBarColor">@color/n1100</color>
+  <color name="statusBarColor">@color/d1100</color>
+  <color name="toolbarBackground">@color/d900</color>
+  <color name="windowBackground">@color/d0</color>
+  <color name="dividerColor">@color/d300</color>
+  <color name="navigationBarColor">@color/d1100</color>
 
-  <color name="toolbarTitleTextColor">@color/n0</color>
-  <color name="toolbarSubtitleTextColor">@color/n50</color>
+  <color name="toolbarTitleTextColor">@color/d0</color>
+  <color name="toolbarSubtitleTextColor">@color/d50</color>
 
 </resources>
