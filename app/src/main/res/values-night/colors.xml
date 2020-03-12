@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <color name="colorAccent">@color/n600</color>
+
+  <!-- Text -->
+  <color name="textColorPrimary">@color/n100</color>
+  <color name="textColorSecondary">@color/n200</color>
+  <color name="textColorTertiary">@color/n300</color>
+
+  <!-- Toolbar -->
+  <color name="statusBarColor">@color/n1000</color>
+  <color name="toolbarBackground">@color/n900</color>
+  <color name="windowBackground">@color/n1300</color>
+  <color name="dividerColor">@color/n400</color>
+  <color name="navigationBarColor">@color/n1000</color>
+
+  <color name="toolbarTitleTextColor">@color/n100</color>
+  <color name="toolbarSubtitleTextColor">@color/n50</color>
+
+
+</resources>
