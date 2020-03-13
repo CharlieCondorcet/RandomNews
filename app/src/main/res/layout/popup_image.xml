@@ -24,4 +24,4 @@
   app:failureImageScaleType="centerInside"
   app:placeholderImage="@drawable/world"
   app:placeholderImageScaleType="fitCenter" />
-  
+

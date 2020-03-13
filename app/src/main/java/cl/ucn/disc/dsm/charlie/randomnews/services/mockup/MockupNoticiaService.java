@@ -28,7 +28,7 @@ import org.threeten.bp.ZonedDateTime;
  *
  * @author Charlie Condorcet.
  */
-public class MockupNoticiaService implements NoticiaService {
+public final class MockupNoticiaService implements NoticiaService {
 
   /**
    * Default Constructor.
