@@ -16,6 +16,9 @@
 package cl.ucn.disc.dsm.charlie.randomnews;
 
 import android.app.Application;
+import android.os.StrictMode;
+import android.os.StrictMode.ThreadPolicy;
+import android.os.StrictMode.VmPolicy;
 import androidx.appcompat.app.AppCompatDelegate;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.jakewharton.threetenabp.AndroidThreeTen;
@@ -50,6 +53,25 @@ public class MainApplication extends Application {
     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY);
 
     AndroidThreeTen.init(this);
+
+    // Enforce strict mode in debug mode
+    if (BuildConfig.DEBUG) {
+      StrictMode.setThreadPolicy(new ThreadPolicy.Builder()
+          .detectDiskReads()
+          .detectDiskWrites()
+          .detectNetwork()
+          .penaltyLog()
+          .penaltyFlashScreen()
+          .build());
+      StrictMode.setVmPolicy(new VmPolicy.Builder()
+          .detectLeakedSqlLiteObjects()
+          .detectLeakedClosableObjects()
+          .detectLeakedRegistrationObjects()
+          .detectActivityLeaks()
+          .detectCleartextNetwork()
+          .penaltyLog()
+          .build());
+    }
 
     log.debug("Initializing: Done.");
   }
