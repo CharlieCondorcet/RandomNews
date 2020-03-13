@@ -22,12 +22,21 @@ import cl.ucn.disc.dsm.charlie.randomnews.services.NoticiaService;
 import cl.ucn.disc.dsm.charlie.randomnews.services.Transformer;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
+import okhttp3.logging.HttpLoggingInterceptor;
+import okhttp3.logging.HttpLoggingInterceptor.Level;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import retrofit2.Call;
 import retrofit2.HttpException;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import okhttp3.OkHttpClient;
+import okhttp3.OkHttpClient.Builder;
+import okhttp3.logging.HttpLoggingInterceptor;
+import okhttp3.logging.HttpLoggingInterceptor.Level;
 
 /**
  * Get a CALL and process the result implementing {@link NoticiaService}.
@@ -35,6 +44,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * @author Charlie Condorcet.
  */
 public final class NewsApiNoticiaService implements NoticiaService {
+
+  /**
+   * The logger.
+   */
+  private static final Logger log = LoggerFactory.getLogger(NewsApiNoticiaService.class);
 
   /**
    * The NewsAPI.
@@ -45,18 +59,34 @@ public final class NewsApiNoticiaService implements NoticiaService {
    * The Constructor.
    */
   public NewsApiNoticiaService() {
-    // https://futurestud.io/tutorials/retrofit-getting-started-and-android-client.
+// Logging with slf4j
+    final HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(log::debug)
+        .setLevel(Level.BODY);
+
+    // Web Client
+    final OkHttpClient httpClient = new Builder()
+        .connectTimeout(5, TimeUnit.SECONDS)
+        .writeTimeout(5, TimeUnit.SECONDS)
+        .readTimeout(5, TimeUnit.SECONDS)
+        .callTimeout(10, TimeUnit.SECONDS)
+        .addNetworkInterceptor(loggingInterceptor)
+        .build();
+
+    // https://futurestud.io/tutorials/retrofit-getting-started-and-android-client
     this.newsApi = new Retrofit.Builder()
-        // The main URL.
+        // The main URL
         .baseUrl(NewsApi.BASE_URL)
-        // JSON to POJO.
+        // JSON to POJO
         .addConverterFactory(GsonConverterFactory.create())
-        // Validate the interface.
+        // Validate the interface
         .validateEagerly(true)
-        // Build the Retrofit .
+        // The client
+        .client(httpClient)
+        // Build the Retrofit ..
         .build()
-        // Get the NewsApi.
+        // .. get the NewsApi.
         .create(NewsApi.class);
+
   }
 
 
