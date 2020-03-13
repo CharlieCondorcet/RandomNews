@@ -17,4 +17,6 @@
   <string name="app_name">RandomNews</string>
   <string name="title">The RandomNews</string>
   <string name="subtitle">News sponsored by NewsAPI.org</string>
+  <string name="arroba">@</string>
+  <string name="at">at</string>
 </resources>
