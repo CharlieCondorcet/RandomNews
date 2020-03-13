@@ -33,4 +33,6 @@
   <color name="toolbarTitleTextColor">@color/d0</color>
   <color name="toolbarSubtitleTextColor">@color/d50</color>
 
+  <color name="dimmed">#E9000000</color>
+
 </resources>
