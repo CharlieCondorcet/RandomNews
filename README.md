@@ -38,13 +38,25 @@ are updated, which are ordered by time of publication.
 
 
 ## Screenshots
-![Screenshot](./img/imageStandar.png)
+Principal Interface
+
+![Screenshot](./img/noticias1.png)
 
 
 ## Features
-Night Mode 🌗
+Image Zoom In
 
-![Nightmode](./img/nightMode1.png)
+![Zoomin](./img/noticias2.png)
+
+
+Visit The Complete News
+
+![Completeversion](./img/noticias3.png)
+
+
+Night Mode 
+
+![Nightmode](./img/noticias4.png)
 
 
 ## Technologies
