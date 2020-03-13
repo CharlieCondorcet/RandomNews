@@ -58,7 +58,7 @@ public class Transformer {
     // The host.
     final String host = getHost(article.url);
 
-    // If the Article is null...
+    // If the Article is null ...
     if (article.title == null) {
 
       log.warn("Article without title: {}", toString(article));
@@ -182,6 +182,5 @@ public class Transformer {
   public static <T> String toString(final T t) {
     return ReflectionToStringBuilder.toString(t, ToStringStyle.MULTI_LINE_STYLE);
   }
-
 
 }

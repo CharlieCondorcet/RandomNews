@@ -59,7 +59,8 @@ public final class NewsApiNoticiaService implements NoticiaService {
    * The Constructor.
    */
   public NewsApiNoticiaService() {
-// Logging with slf4j
+
+// Logging with slf4j.
     final HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(log::debug)
         .setLevel(Level.BODY);
 
@@ -74,17 +75,17 @@ public final class NewsApiNoticiaService implements NoticiaService {
 
     // https://futurestud.io/tutorials/retrofit-getting-started-and-android-client
     this.newsApi = new Retrofit.Builder()
-        // The main URL
+        // The main URL.
         .baseUrl(NewsApi.BASE_URL)
-        // JSON to POJO
+        // JSON to POJO.
         .addConverterFactory(GsonConverterFactory.create())
-        // Validate the interface
+        // Validate the interface.
         .validateEagerly(true)
-        // The client
+        // The client.
         .client(httpClient)
-        // Build the Retrofit ..
+        // Build the Retrofit ...
         .build()
-        // .. get the NewsApi.
+        // ... get the NewsApi.
         .create(NewsApi.class);
 
   }
@@ -147,7 +148,7 @@ public final class NewsApiNoticiaService implements NoticiaService {
   @Override
   public List<Noticia> getNoticias(int pageSize) {
 
-    // the Call
+    // the Call.
     final Call<NewsApiResult> theCall = this.newsApi.getEverything(pageSize);
 
     // Process the Call.

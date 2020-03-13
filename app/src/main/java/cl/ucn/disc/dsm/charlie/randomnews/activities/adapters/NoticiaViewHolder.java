@@ -69,13 +69,13 @@ public class NoticiaViewHolder extends RecyclerView.ViewHolder {
     final Date date = DateTimeUtils.toDate(noticia.getFecha().toInstant());
     this.binding.tvFecha.setText(this.prettyTyme.format(date));
 
-    // If exist the url ..
+    // If exist the url ...
     if (noticia.getUrlFoto() != null) {
-      // .. set the uri
+      // ... set the uri.
       this.binding.sdvFoto.setImageURI(noticia.getUrlFoto());
     } else {
-      // .. set a default image
-      this.binding.sdvFoto.setImageResource(R.drawable.ic_launcher_background);
+      // .. set a default image.
+      this.binding.sdvFoto.setImageResource(R.drawable.newsicon);
     }
   }
 

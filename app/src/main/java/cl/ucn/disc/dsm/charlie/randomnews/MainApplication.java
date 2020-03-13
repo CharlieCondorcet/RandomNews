@@ -48,7 +48,7 @@ public class MainApplication extends Application {
     super.onCreate();
     log.debug("Initializing...");
 
-    // Fresco configuration for large images
+    // Fresco configuration for large images.
     ImagePipelineConfig config = ImagePipelineConfig.newBuilder(this)
         .setProgressiveJpegConfig(new SimpleProgressiveJpegConfig())
         .setResizeAndRotateEnabledForNetwork(true)
@@ -63,7 +63,7 @@ public class MainApplication extends Application {
 
     AndroidThreeTen.init(this);
 
-    // Enforce strict mode in debug mode
+    // Enforce strict mode in debug mode.
     if (BuildConfig.DEBUG) {
       StrictMode.setThreadPolicy(new ThreadPolicy.Builder()
           .detectDiskReads()

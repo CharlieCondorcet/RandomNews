@@ -106,59 +106,59 @@ public class NoticiaAdapter extends RecyclerView.Adapter<NoticiaViewHolder> {
   @Override
   public NoticiaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-    // The inflater
+    // The inflater.
     final LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
 
-    // The row of noticia
+    // The row of noticia.
     final RowNoticiaBinding rowNoticiaBinding = RowNoticiaBinding.inflate(
         layoutInflater,
         parent,
         false
     );
 
-    // The NoticiaViewHolder
+    // The NoticiaViewHolder.
     final NoticiaViewHolder noticiaViewHolder = new NoticiaViewHolder(rowNoticiaBinding);
 
-    // Click over the image
+    // Click over the image.
     rowNoticiaBinding.sdvFoto.setOnClickListener(view -> {
 
-      // The position
+      // The position.
       final int position = noticiaViewHolder.getAdapterPosition();
 
-      // The id
+      // The id.
       final long id = noticiaViewHolder.getItemId();
       log.debug("Click! position: {}, id: {}.", position, Long.toHexString(id));
 
-      // Noticia to show
+      // Noticia to show.
       final Noticia noticia = this.theNoticias.get(position);
 
-      // Nothing to do
+      // Nothing to do.
       if (noticia.getUrlFoto() == null) {
         return;
       }
 
-      // Popup the image
+      // Popup the image.
       this.showImagePopup(noticia, layoutInflater, parent.getContext());
 
     });
 
-    // Click in the row
+    // Click in the row.
     rowNoticiaBinding.getRoot().setOnClickListener(view -> {
 
-      // The position
+      // The position.
       final int position = noticiaViewHolder.getAdapterPosition();
 
-      // The id
+      // The id.
       final long id = noticiaViewHolder.getItemId();
       log.debug("Click! position: {}, id: {}.", position, Long.toHexString(id));
 
-      // Noticia to show
+      // Noticia to show.
       final Noticia noticia = this.theNoticias.get(position);
 
       log.debug("Link: {}.", noticia.getUrl());
       if (noticia.getUrl() != null) {
 
-        // Open the browser
+        // Open the browser.
         parent.getContext().startActivity(
             new Intent(
                 Intent.ACTION_VIEW,
@@ -170,7 +170,6 @@ public class NoticiaAdapter extends RecyclerView.Adapter<NoticiaViewHolder> {
     });
 
     return noticiaViewHolder;
-
   }
 
   /**
