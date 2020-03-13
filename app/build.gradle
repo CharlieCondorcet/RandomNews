@@ -114,4 +114,7 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
 
+    // PhotoDraweeView: https://github.com/ongakuer/PhotoDraweeView
+    implementation "me.relex:photodraweeview:2.0.0"
+    
 }
