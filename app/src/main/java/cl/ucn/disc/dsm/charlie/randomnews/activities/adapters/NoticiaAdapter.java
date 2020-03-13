@@ -168,7 +168,7 @@ public class NoticiaAdapter extends RecyclerView.Adapter<NoticiaViewHolder> {
       }
 
     });
-    
+
     return noticiaViewHolder;
 
   }
