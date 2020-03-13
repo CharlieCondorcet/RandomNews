@@ -142,6 +142,33 @@ public class NoticiaAdapter extends RecyclerView.Adapter<NoticiaViewHolder> {
 
     });
 
+    // Click in the row
+    rowNoticiaBinding.getRoot().setOnClickListener(view -> {
+
+      // The position
+      final int position = noticiaViewHolder.getAdapterPosition();
+
+      // The id
+      final long id = noticiaViewHolder.getItemId();
+      log.debug("Click! position: {}, id: {}.", position, Long.toHexString(id));
+
+      // Noticia to show
+      final Noticia noticia = this.theNoticias.get(position);
+
+      log.debug("Link: {}.", noticia.getUrl());
+      if (noticia.getUrl() != null) {
+
+        // Open the browser
+        parent.getContext().startActivity(
+            new Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse(noticia.getUrl())
+            )
+        );
+      }
+
+    });
+    
     return noticiaViewHolder;
 
   }
