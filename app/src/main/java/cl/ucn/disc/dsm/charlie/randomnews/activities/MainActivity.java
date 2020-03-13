@@ -75,13 +75,7 @@ public class MainActivity extends AppCompatActivity {
       this.setSupportActionBar(binding.toolbar);
     }
 
-    // The refresh.
-    {
-      binding.swlRefresh.setOnRefreshListener(() -> {
-        log.debug("Refreshing ..");
-      });
-    }
-
+    Toasty.info(this, "Refresh the News :)",Toasty.LENGTH_LONG).show();
 
 
     // The Adapter + RecyclerView.
@@ -101,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
 
     // The NoticiaService.
     this.noticiaService = new NewsApiNoticiaService();
-
 
 
     // The refresh.
@@ -168,4 +161,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
   }
+
+
 }
