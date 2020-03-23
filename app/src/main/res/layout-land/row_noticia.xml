@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (c) 2020. Charlie Condorcet.
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~ Copyright (c) 2020 Charlie Condorcet
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
   ~ You may obtain a copy of the License at
   ~
   ~     http://www.apache.org/licenses/LICENSE-2.0
   ~
-  ~  Unless required by applicable law or agreed to in writing, software
+  ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~  See the License for the specific language governing permissions and
+  ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
 
@@ -28,7 +28,7 @@
 
     <com.facebook.drawee.view.SimpleDraweeView
       android:id="@+id/sdv_foto"
-      android:layout_width="70dp"
+      android:layout_width="280dp"
       android:layout_height="match_parent"
       android:paddingTop="2dp"
       android:paddingStart="2dp"
@@ -37,45 +37,49 @@
 
     <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="180dp"
       android:orientation="vertical">
-
-
+      
       <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:orientation="horizontal">
 
         <TextView
           android:id="@+id/tv_autor"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+          android:layout_height="match_parent"
           android:layout_weight="0.1"
           android:textAppearance="@style/TextSmall"
+          android:textSize="14sp"
           tools:text="@tools:sample/full_names" />
 
         <TextView
           android:id="@+id/tv_sup_arroba"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+          android:layout_height="match_parent"
           android:layout_weight="0.1"
-          android:text="@string/arroba" />
+          android:text="@string/arroba"
+          android:textSize="14sp" />
+
         <TextView
           android:id="@+id/tv_fuente"
           android:textStyle="bold"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+          android:layout_height="match_parent"
           android:layout_weight="1"
           android:textAppearance="@style/TextSmall"
+          android:textSize="14sp"
           tools:text="@tools:sample/cities" />
 
         <TextView
           android:id="@+id/tv_fecha"
           android:layout_width="0dp"
-          android:layout_height="wrap_content"
+          android:layout_height="match_parent"
           android:layout_weight="3"
           android:textAlignment="textEnd"
           android:textAppearance="@style/TextSmall"
+          android:textSize="14sp"
           tools:text="@tools:sample/date/ddmmyy" />
       </LinearLayout>
 
@@ -83,24 +87,20 @@
         android:id="@+id/tv_titulo"
         android:textStyle="bold"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:textAppearance="@style/TextLarge"
+        android:textSize="24sp"
         tools:text="@tools:sample/lorem" />
 
       <TextView
         android:id="@+id/tv_resumen"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:textAppearance="@style/TextMedium"
+        android:textSize="18sp"
         tools:text="@tools:sample/lorem" />
-
     </LinearLayout>
 
   </LinearLayout>
-
-
-
-
-
 
 </LinearLayout>
