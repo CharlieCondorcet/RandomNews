@@ -59,6 +59,11 @@ Night Mode
 ![Nightmode](./img/noticias4.png)
 
 
+Landscape Mode
+
+![Landscape](./img/noticias5.png)
+
+
 ## Technologies
 - JAVA 8<br>
 - Gradle<br>
@@ -89,6 +94,6 @@ appeared along the way.
  
  
 ## Contact
-- Created by [@CharlieCondorcet](https://github.com/charliecondotcet)
+- Created by [@CharlieCondorcet](https://github.com/charliecondorcet)
 - To report bugs and feedback: RandomNewsSupport@charliedroid.com
 - Official website to manage new Android projects: www.charliedroid.com
