@@ -14,6 +14,7 @@ Android Studio - News - www.newsapi.org - Documentation Google Java Style
 * [Technologies](#technologies)
 * [Sources](#sources)
 * [Status](#status)
+* [To-do](#to-do)
 * [License](#license)
 * [Gratitude](#gratitude)
 * [Contact](#contact)
@@ -79,6 +80,12 @@ Landscape Mode
 considering that the guides provided to build the App for the DSM class as 
 first objective, because the application is open even to many improvements both 
 functional and UI.
+
+
+## To do
+I had planned to use the Google news api, Gnews, specifically the Top News 
+service, because the structure of the article is similar but I could not make 
+it work due to the Call, Get and Headers issue.
 
 
 ## License
